@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chaining & Border</title>
+
+<!-- jQuery Library -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffecd2,#fcb69f);
+
+}
+
+.container{
+
+width:600px;
+padding:30px;
+background:white;
+border-radius:15px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+h1{
+
+margin-bottom:20px;
+
+}
+
+#box{
+
+width:220px;
+height:220px;
+margin:30px auto;
+background:#4CAF50;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+font-weight:bold;
+color:white;
+border-radius:15px;
+
+}
+
+button{
+
+padding:12px 20px;
+font-size:18px;
+background:#007BFF;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#0056b3;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>jQuery Chaining Example</h1>
+
+<div id="box">
+
+BOX
+
+</div>
+
+<button id="btn">
+
+Apply Chaining
+
+</button>
+
+</div>
+
+<script>
+
+$(document).ready(function(){
+
+$("#btn").click(function(){
+
+$("#box")
+
+.css("background","#FF5722")
+
+.css("border","6px solid blue")
+
+.css("color","yellow")
+
+.css("font-size","35px")
+
+.fadeOut(1000)
+
+.fadeIn(1000)
+
+.slideUp(1000)
+
+.slideDown(1000);
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Add & Remove Class</title>
+
+<!-- jQuery Library -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#6a11cb,#2575fc);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+.container{
+
+width:500px;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.3);
+text-align:center;
+
+}
+
+h1{
+
+margin-bottom:20px;
+color:#333;
+
+}
+
+p{
+
+font-size:22px;
+margin:25px 0;
+transition:.5s;
+
+}
+
+.highlight{
+
+color:white;
+background:#ff5722;
+padding:15px;
+border-radius:10px;
+font-size:28px;
+font-weight:bold;
+letter-spacing:1px;
+
+}
+
+button{
+
+padding:12px 20px;
+font-size:17px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+margin:10px;
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+.add{
+
+background:#28a745;
+color:white;
+
+}
+
+.remove{
+
+background:#dc3545;
+color:white;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>jQuery Add & Remove Class</h1>
+
+<p id="text">
+
+Welcome to jQuery Practical
+
+</p>
+
+<button class="add" id="addBtn">
+
+Add Class
+
+</button>
+
+<button class="remove" id="removeBtn">
+
+Remove Class
+
+</button>
+
+</div>
+
+<script>
+
+$(document).ready(function(){
+
+$("#addBtn").click(function(){
+
+$("#text").addClass("highlight");
+
+});
+
+$("#removeBtn").click(function(){
+
+$("#text").removeClass("highlight");
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

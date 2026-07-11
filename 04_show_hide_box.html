@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Show & Hide Box</title>
+
+<!-- jQuery Library -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#11998e,#38ef7d);
+
+}
+
+.container{
+
+width:500px;
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+h1{
+
+margin-bottom:20px;
+color:#333;
+
+}
+
+.box{
+
+width:250px;
+height:150px;
+background:#4CAF50;
+margin:30px auto;
+border-radius:10px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+color:white;
+font-weight:bold;
+
+}
+
+button{
+
+padding:12px 20px;
+margin:10px;
+font-size:16px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+.show{
+
+background:#28a745;
+color:white;
+
+}
+
+.hide{
+
+background:#dc3545;
+color:white;
+
+}
+
+.toggle{
+
+background:#007BFF;
+color:white;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>jQuery Show & Hide Box</h1>
+
+<div class="box" id="box">
+
+Hello jQuery
+
+</div>
+
+<button class="show" id="showBtn">
+
+Show
+
+</button>
+
+<button class="hide" id="hideBtn">
+
+Hide
+
+</button>
+
+<button class="toggle" id="toggleBtn">
+
+Toggle
+
+</button>
+
+</div>
+
+<script>
+
+$(document).ready(function(){
+
+$("#hideBtn").click(function(){
+
+$("#box").hide(1000);
+
+});
+
+$("#showBtn").click(function(){
+
+$("#box").show(1000);
+
+});
+
+$("#toggleBtn").click(function(){
+
+$("#box").toggle(1000);
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>

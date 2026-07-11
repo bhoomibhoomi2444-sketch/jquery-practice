@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Animation & Stop Animation</title>
+
+<!-- jQuery Library -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+.container{
+
+width:700px;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+text-align:center;
+
+}
+
+h1{
+
+margin-bottom:20px;
+color:#333;
+
+}
+
+.area{
+
+position:relative;
+height:200px;
+border:2px dashed gray;
+margin:30px 0;
+overflow:hidden;
+
+}
+
+#box{
+
+width:80px;
+height:80px;
+background:#2196F3;
+position:absolute;
+left:0;
+top:60px;
+border-radius:10px;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+font-weight:bold;
+
+}
+
+button{
+
+padding:12px 22px;
+margin:10px;
+font-size:16px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+.start{
+
+background:#28a745;
+color:white;
+
+}
+
+.stop{
+
+background:#dc3545;
+color:white;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>jQuery Animation & Stop</h1>
+
+<div class="area">
+
+<div id="box">
+
+BOX
+
+</div>
+
+</div>
+
+<button class="start" id="startBtn">
+
+Start Animation
+
+</button>
+
+<button class="stop" id="stopBtn">
+
+Stop Animation
+
+</button>
+
+</div>
+
+<script>
+
+$(document).ready(function(){
+
+$("#startBtn").click(function(){
+
+$("#box").animate({
+
+left:"580px"
+
+},5000);
+
+});
+
+$("#stopBtn").click(function(){
+
+$("#box").stop();
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>

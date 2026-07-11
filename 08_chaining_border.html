@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>jQuery Alert Effects</title>
+
+<!-- jQuery Library -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+
+}
+
+.container{
+
+width:500px;
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+h1{
+
+margin-bottom:20px;
+color:#333;
+
+}
+
+p{
+
+font-size:18px;
+margin-bottom:25px;
+
+}
+
+button{
+
+padding:12px 20px;
+margin:10px;
+font-size:16px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+color:white;
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+#success{
+
+background:#28a745;
+
+}
+
+#warning{
+
+background:#ffc107;
+color:black;
+
+}
+
+#error{
+
+background:#dc3545;
+
+}
+
+#welcome{
+
+background:#007bff;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>jQuery Alert Effects</h1>
+
+<p>Click any button to display different alert messages.</p>
+
+<button id="welcome">Welcome Alert</button>
+
+<button id="success">Success Alert</button>
+
+<button id="warning">Warning Alert</button>
+
+<button id="error">Error Alert</button>
+
+</div>
+
+<script>
+
+$(document).ready(function(){
+
+$("#welcome").click(function(){
+
+alert("👋 Welcome to jQuery Practical!");
+
+});
+
+$("#success").click(function(){
+
+alert("✅ Operation Completed Successfully!");
+
+});
+
+$("#warning").click(function(){
+
+alert("⚠ Warning! Please check your input.");
+
+});
+
+$("#error").click(function(){
+
+alert("❌ Error! Something went wrong.");
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

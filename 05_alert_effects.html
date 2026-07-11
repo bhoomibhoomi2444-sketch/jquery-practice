@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Keyboard Events</title>
+
+<!-- jQuery Library -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#667eea,#764ba2);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+.container{
+
+width:550px;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+text-align:center;
+
+}
+
+h1{
+
+margin-bottom:20px;
+color:#333;
+
+}
+
+input{
+
+width:100%;
+padding:12px;
+font-size:18px;
+border:2px solid #ccc;
+border-radius:8px;
+margin-top:20px;
+
+}
+
+#message{
+
+margin-top:25px;
+font-size:22px;
+font-weight:bold;
+color:#007BFF;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>jQuery Keyboard Events</h1>
+
+<p>Type something inside the textbox.</p>
+
+<input type="text" id="textbox" placeholder="Start typing here...">
+
+<div id="message">
+
+Waiting for keyboard input...
+
+</div>
+
+</div>
+
+<script>
+
+$(document).ready(function(){
+
+$("#textbox").keydown(function(){
+
+$("#message").text("⌨ Key Down Event Triggered");
+
+});
+
+$("#textbox").keypress(function(){
+
+$("#message").text("✍ Key Press Event Triggered");
+
+});
+
+$("#textbox").keyup(function(){
+
+$("#message").text("✅ Key Up Event Triggered");
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
